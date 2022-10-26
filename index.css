@@ -1,0 +1,71 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins',sans-serif;
+}
+
+body
+{
+	background-color: #15212d;
+}
+
+.container
+{
+	position: relative;
+	padding: 100px 150px;
+}
+
+.container h2
+{
+	font-size: 3em;
+	font-weight: 500;
+	color: #fff;
+	margin-bottom: 40px;
+	line-height: 1.1em;
+}
+
+.container p
+{
+    font-size: 1.1em;
+	font-weight: 500;
+	color: #767f88;
+	margin-bottom: 40px;
+	line-height: 1.5em;
+}
+
+/* Upar ye sb sirf content ki formatting hai aur kuch nhi hai*/
+
+/* Niche se humne us Scroll wale button ki styling shuru kar di hai */
+.scrollTop
+{
+
+   position: fixed;
+   bottom: 40px;
+   right: -50px;         /* Humne isse right side m hide kar diya hai */
+   color: #fff;
+   background-color: red;
+   border-radius: 50%;
+   width: 50px;
+   height: 50px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 25px;
+   z-index: 10000;
+      
+   /* By default ye hide hi rahega,magar jaise hi page scroll 500 touch karega,to niche wali ".active class shuru ho jaegi" */ 
+   opacity: 0;
+   transition: 0.5s;   /* For smooth transition */
+   cursor: pointer;
+ 
+}
+
+.scrollTop.active   /*   Jaise hi scroll > 500 ho jaye to ye class Activate ho jaye  */
+{
+	visibility: visible;
+	opacity: 1;
+	right: 50px;
+
+}
